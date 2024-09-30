@@ -1,6 +1,6 @@
 import {HomeIcon} from '@sanity/icons'
-import {defineArrayMember, defineField} from 'sanity'
-import { GROUPS } from '../../constants'
+import {defineField} from 'sanity'
+import {GROUPS} from '../../constants'
 
 const TITLE = 'Home'
 
@@ -12,36 +12,70 @@ export const homeType = defineField({
   groups: GROUPS,
   fields: [
     defineField({
-      name: 'hero',
-      type: 'hero',
+      name: 'video',
+      title: 'Banner Video',
+      type: 'video',
       group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
     }),
     defineField({
-      name: 'modules',
-      type: 'array',
-      of: [
-        defineArrayMember({ type: 'accordion' }),
-        defineArrayMember({ type: 'callout' }),
-        defineArrayMember({ type: 'grid' }),
-        defineArrayMember({ type: 'images' }),
-        defineArrayMember({ type: 'imageWithProductHotspots', title: 'Image with Hotspots' }),
-        defineArrayMember({ type: 'instagram' }),
-        defineArrayMember({ type: 'products' }),
-      ],
+      name: 'homepageSecondSections',
+      title: 'Homepage Second Sections',
+      type: 'homepageSecondSection',
       group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
     }),
+    defineField({
+      name: 'homepageThirdSection',
+      title: 'Homepage Third Sections',
+      type: 'homepageThirdSection',
+      group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
+    }),
+    // defineField({
+    //   name: 'modules',
+    //   type: 'array',
+    //   of: [
+    //     defineArrayMember({type: 'accordion'}),
+    //     defineArrayMember({type: 'callout'}),
+    //     defineArrayMember({type: 'grid'}),
+    //     defineArrayMember({type: 'images'}),
+    //     defineArrayMember({type: 'imageWithProductHotspots', title: 'Image with Hotspots'}),
+    //     defineArrayMember({type: 'instagram'}),
+    //     defineArrayMember({type: 'products'}),
+    //   ],
+    //   group: 'editorial',
+    // }),
     defineField({
       name: 'seo',
       title: 'SEO',
       type: 'seo',
       group: 'seo',
     }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+    }),
   ],
   preview: {
-    prepare() {
+    select: {
+      language: 'language',
+    },
+    prepare(selection) {
+      const {language} = selection
       return {
         media: HomeIcon,
-        subtitle: 'Index',
+        subtitle: language,
         title: TITLE,
       }
     },

@@ -1,4 +1,3 @@
-
 import {PackageIcon} from '@sanity/icons'
 import {defineField} from 'sanity'
 
@@ -22,6 +21,11 @@ export const collectionReferenceType = defineField({
       type: 'boolean',
       description: 'Use Shopify collection image as background (if available)',
       initialValue: false,
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
     }),
   ],
   preview: {

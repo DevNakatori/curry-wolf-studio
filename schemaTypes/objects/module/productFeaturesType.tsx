@@ -15,6 +15,11 @@ export const productFeaturesType = defineField({
       validation: (Rule) => Rule.required().max(2),
     }),
     defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+    }),
+    defineField({
       name: 'layout',
       type: 'string',
       initialValue: 'card',

@@ -20,6 +20,11 @@ export const collectionRuleType = defineField({
       name: 'condition',
       type: 'string',
     }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+    }),
   ],
   preview: {
     select: {

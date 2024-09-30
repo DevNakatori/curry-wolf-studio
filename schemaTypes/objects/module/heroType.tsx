@@ -13,7 +13,7 @@ export const heroType = defineField({
     defineField({
       name: 'description',
       type: 'text',
-      rows: 3,
+      rows: 4,
     }),
     defineField({
       name: 'link',

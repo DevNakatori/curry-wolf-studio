@@ -13,12 +13,6 @@ export const settingsType = defineType({
   icon: CogIcon,
   groups: [
     {
-      default: true,
-      name: 'navigation',
-      title: 'Navigation',
-      icon: MenuIcon,
-    },
-    {
       name: 'productOptions',
       title: 'Product options',
       icon: ControlsIcon,
@@ -35,16 +29,6 @@ export const settingsType = defineType({
     },
   ],
   fields: [
-    defineField({
-      name: 'menu',
-      type: 'menu',
-      group: 'navigation',
-    }),
-    defineField({
-      name: 'footer',
-      type: 'footerSettings',
-      group: 'navigation',
-    }),
     defineField({
       name: 'customProductOptions',
       type: 'array',
@@ -84,6 +68,11 @@ export const settingsType = defineType({
       title: 'SEO',
       type: 'seo',
       group: 'seo',
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
     }),
   ],
   preview: {

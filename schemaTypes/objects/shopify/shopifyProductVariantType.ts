@@ -116,6 +116,11 @@ export const shopifyProductVariantType = defineField({
       type: 'string',
       description: 'Image displayed in both cart and checkout',
     }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
+    }),
   ],
   readOnly: true,
 })

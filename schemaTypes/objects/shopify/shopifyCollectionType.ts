@@ -8,7 +8,6 @@ export const shopifyCollectionType = defineField({
     collapsed: false,
     collapsible: true,
   },
-  readOnly: true,
   fieldsets: [
     {
       name: 'status',
@@ -68,8 +67,7 @@ export const shopifyCollectionType = defineField({
       name: 'rules',
       type: 'array',
       description: 'Include Shopify products that satisfy these conditions',
-      of: [{type: 'collectionRule'},
-      ],
+      of: [{type: 'collectionRule'}],
     }),
     defineField({
       name: 'disjunctive',

@@ -1,10 +1,9 @@
-
-import { CopyIcon } from '@sanity/icons'
+import {CopyIcon} from '@sanity/icons'
 import {defineField, defineType} from 'sanity'
 
 import ProductVariantHiddenInput from '../../components/inputs/ProductVariantHidden'
 import ShopifyDocumentStatus from '../../components/media/ShopifyDocumentStatus'
-import { GROUPS } from '../../constants'
+import {GROUPS} from '../../constants'
 
 export const productVariantType = defineType({
   name: 'productVariant',
@@ -37,6 +36,11 @@ export const productVariantType = defineType({
       description: 'Variant data from Shopify (read-only)',
       type: 'shopifyProductVariant',
       group: 'shopifySync',
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
     }),
   ],
   preview: {

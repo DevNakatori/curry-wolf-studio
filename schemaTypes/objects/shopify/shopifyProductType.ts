@@ -8,7 +8,6 @@ export const shopifyProductType = defineField({
     collapsed: false,
     collapsible: true,
   },
-  readOnly: true,
   fieldsets: [
     {
       name: 'status',
@@ -112,8 +111,12 @@ export const shopifyProductType = defineField({
     defineField({
       name: 'options',
       type: 'array',
-      of: [{type: 'option'},
-      ],
+      of: [{type: 'option'}],
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
     }),
     defineField({
       fieldset: 'variants',

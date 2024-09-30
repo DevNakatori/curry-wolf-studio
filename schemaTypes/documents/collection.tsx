@@ -1,11 +1,10 @@
-
 import {defineArrayMember, defineField, defineType} from 'sanity'
 import {PackageIcon} from '@sanity/icons'
 import {getExtension} from '@sanity/asset-utils'
 import pluralize from 'pluralize-esm'
 import CollectionHiddenInput from '../../components/inputs/CollectionHidden'
 import ShopifyDocumentStatus from '../../components/media/ShopifyDocumentStatus'
-import { GROUPS } from '../../constants'
+import {GROUPS} from '../../constants'
 
 export const collectionType = defineType({
   name: 'collection',
@@ -38,58 +37,26 @@ export const collectionType = defineType({
       options: {field: 'store.slug.current'},
     }),
     defineField({
-      name: 'colorTheme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'theme',
-    }),
-    defineField({
-      name: 'vector',
-      title: 'Vector artwork',
-      type: 'image',
-      description: 'Displayed in collection links using color theme',
+      name: 'benefitsSection',
+      title: 'Benefits Section',
+      type: 'benefitsSection',
+      group: 'editorial',
       options: {
-        accept: 'image/svg+xml',
+        collapsed: false,
+        collapsible: true,
       },
-      group: 'theme',
-      validation: (Rule) =>
-        Rule.custom((image) => {
-          if (!image?.asset?._ref) {
-            return true
-          }
+    }),
+    defineField({
+      name: 'trustedShop',
+      title: 'Trusted Shop Section',
+      type: 'trustedShop',
+      group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
+    }),
 
-          const format = getExtension(image.asset._ref)
-
-          if (format !== 'svg') {
-            return 'Image must be an SVG'
-          }
-          return true
-        }),
-    }),
-    defineField({
-      name: 'showHero',
-      type: 'boolean',
-      description: 'If disabled, page title will be displayed instead',
-      group: 'editorial',
-    }),
-    defineField({
-      name: 'hero',
-      type: 'hero',
-      hidden: ({document}) => !document?.showHero,
-      group: 'editorial',
-    }),
-    defineField({
-      name: 'modules',
-      type: 'array',
-      description: 'Editorial modules to associate with this collection',
-      of: [
-        defineArrayMember({type: 'callout'}),
-        defineArrayMember({type: 'callToAction'}),
-        defineArrayMember({type: 'image'}),
-        defineArrayMember({type: 'instagram'}),
-      ],
-      group: 'editorial',
-    }),
     defineField({
       name: 'store',
       title: 'Shopify',
@@ -102,6 +69,11 @@ export const collectionType = defineType({
       title: 'SEO',
       type: 'seo',
       group: 'seo',
+    }),
+    defineField({
+      name: 'language',
+      type: 'string',
+      readOnly: true,
     }),
   ],
   orderings: [
