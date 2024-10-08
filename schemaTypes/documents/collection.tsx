@@ -94,8 +94,9 @@ export const collectionType = defineType({
       isDeleted: 'store.isDeleted',
       rules: 'store.rules',
       title: 'store.title',
+      language: 'language',
     },
-    prepare({imageUrl, isDeleted, rules, title}) {
+    prepare({imageUrl, isDeleted, rules, title, language}) {
       const ruleCount = rules?.length || 0
 
       return {
@@ -107,7 +108,10 @@ export const collectionType = defineType({
             title={title}
           />
         ),
-        subtitle: ruleCount > 0 ? `Automated (${pluralize('rule', ruleCount, true)})` : 'Manual',
+        subtitle:
+          ruleCount > 0
+            ? `Automated (${pluralize('rule', ruleCount, true)}) `
+            : `Manual,${language}`,
         title,
       }
     },

@@ -5,6 +5,7 @@ import ShopifyDocumentStatus from '../../components/media/ShopifyDocumentStatus'
 import {defineField, defineType} from 'sanity'
 import {getPriceRange} from '../../utils/getPriceRange'
 import {GROUPS} from '../../constants'
+import {lazy} from 'react'
 
 export const productType = defineType({
   name: 'product',
@@ -37,12 +38,6 @@ export const productType = defineType({
       title: 'Slug',
       type: 'proxyString',
       options: {field: 'store.slug.current'},
-    }),
-    defineField({
-      name: 'colorTheme',
-      type: 'reference',
-      to: [{type: 'colorTheme'}],
-      group: 'editorial',
     }),
     defineField({
       name: 'body',
@@ -98,9 +93,11 @@ export const productType = defineType({
       status: 'store.status',
       title: 'store.title',
       variants: 'store.variants',
+      language: 'language',
     },
     prepare(selection) {
-      const {isDeleted, options, previewImageUrl, priceRange, status, title, variants} = selection
+      const {isDeleted, options, previewImageUrl, priceRange, status, title, variants, language} =
+        selection
 
       const optionCount = options?.length
       const variantCount = variants?.length
@@ -120,7 +117,7 @@ export const productType = defineType({
 
       return {
         description: description.join(' / '),
-        subtitle,
+        subtitle: `${subtitle} - ${language === undefined ? 'Language not set' : language}`,
         title,
         media: (
           <ShopifyDocumentStatus

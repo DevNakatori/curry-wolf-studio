@@ -84,6 +84,35 @@ export const shopifyProductType = defineField({
       rows: 5,
     }),
     defineField({
+      name: 'collectionBadge',
+      title: 'Collection Badge',
+      type: 'string',
+      description: 'The badge displayed for the product, e.g., Sale or New',
+    }),
+    defineField({
+      name: 'preparation',
+      title: 'Preparation',
+      type: 'text',
+    }),
+    defineField({
+      name: 'additionalInformation',
+      title: 'Additional Information',
+      type: 'text',
+      description: 'Any additional information about the product',
+    }),
+    defineField({
+      name: 'ingredients',
+      title: 'Ingredients',
+      type: 'text',
+      description: 'The ingredients of the product',
+    }),
+    defineField({
+      name: 'nutritionalValues',
+      title: 'Nutritional Values',
+      type: 'text',
+      description: 'Nutritional values for the product',
+    }),
+    defineField({
       fieldset: 'organization',
       name: 'productType',
       type: 'string',
@@ -112,11 +141,6 @@ export const shopifyProductType = defineField({
       name: 'options',
       type: 'array',
       of: [{type: 'option'}],
-    }),
-    defineField({
-      name: 'language',
-      type: 'string',
-      readOnly: true,
     }),
     defineField({
       fieldset: 'variants',

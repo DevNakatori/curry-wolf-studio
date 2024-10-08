@@ -1,12 +1,11 @@
 import {DocumentIcon} from '@sanity/icons'
-import {defineField} from 'sanity'
-
-import {validateSlug} from '../../utils/validateSlug'
+import {defineArrayMember, defineField} from 'sanity'
 import {GROUPS} from '../../constants'
+import {validateSlug} from '../../utils/validateSlug'
 
-export const pageType = defineField({
-  name: 'page',
-  title: 'Page',
+export const LocationType = defineField({
+  name: 'locations',
+  title: 'Location',
   type: 'document',
   icon: DocumentIcon,
   groups: GROUPS,
@@ -23,22 +22,29 @@ export const pageType = defineField({
       type: 'string',
     }),
     defineField({
-      name: 'showHero',
-      type: 'boolean',
-      description: 'If disabled, page title will be displayed instead',
-      initialValue: false,
+      name: 'imagesLabels',
       group: 'editorial',
+      type: 'locationLink',
     }),
     defineField({
-      name: 'hero',
-      type: 'hero',
-      hidden: ({document}) => !document?.showHero,
+      name: 'locationSecondSectionType',
+      title: 'LocationPage Second Sections',
+      type: 'locationSecondSectionType',
       group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
     }),
     defineField({
-      name: 'body',
-      type: 'portableText',
+      name: 'locationThirdSection',
+      title: 'Location Third Sections',
+      type: 'locationThirdSection',
       group: 'editorial',
+      options: {
+        collapsed: false,
+        collapsible: true,
+      },
     }),
     defineField({
       name: 'seo',

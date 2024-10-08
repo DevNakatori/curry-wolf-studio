@@ -15,7 +15,6 @@ import {getAllLanguages} from './utils/countries'
 import {presentationTool} from '@sanity/presentation'
 import {projectDetails} from './project.details'
 import {languageFilter} from '@sanity/language-filter'
-import {groqdPlaygroundTool} from 'groqd-playground'
 import {PreviewIcon} from './components/icons/Preview'
 import {googleTranslate} from 'sanity-plugin-google-translate'
 import {muxInput} from 'sanity-plugin-mux-input'
@@ -26,7 +25,6 @@ const devOnlyPlugins = [
     defaultApiVersion: apiVersion,
     defaultDataset: dataset,
   }),
-  groqdPlaygroundTool(),
 ]
 const languages = getAllLanguages()
 const SANITY_STUDIO_PRODUCTION_URL = isDev
@@ -56,18 +54,40 @@ export default defineConfig({
     }),
     documentInternationalization({
       supportedLanguages: languages,
-      schemaTypes: ['page', 'home', 'header', 'footer', 'product', 'settings', 'collection'],
+      schemaTypes: [
+        'page',
+        'home',
+        'locations',
+        'catering',
+        'locationInnerPage',
+        'header',
+        'footer',
+        'product',
+        'settings',
+        'collection',
+      ],
     }),
     internationalizedArray({
       languages: getAllLanguages(),
       defaultLanguages: [languages[0].id],
-      fieldTypes: ['string', 'text', 'slug', 'headerNavigation'],
+      fieldTypes: ['string', 'text', 'slug', 'headerNavigation', 'locationLink'],
       buttonLocations: ['field'],
     }),
     languageFilter({
       supportedLanguages: getAllLanguages(),
       defaultLanguages: [languages[0].id],
-      documentTypes: ['page', 'home', 'header', 'footer', 'product', 'settings', 'collection'],
+      documentTypes: [
+        'page',
+        'home',
+        'locations',
+        'catering',
+        'locationInnerPage',
+        'header',
+        'footer',
+        'product',
+        'settings',
+        'collection',
+      ],
       filterField: (enclosingType, member, selectedLanguageIds) => {
         // Filter internationalized arrays
         if (
@@ -99,60 +119,60 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
-    templates: (prev) => {
-      const prevFiltered = prev.filter(
-        (template) => !['home', 'pages', 'setting', 'products', 'collection'].includes(template.id),
-      )
+    // templates: (prev) => {
+    //   const prevFiltered = prev.filter(
+    //     (template) => !['home', 'pages', 'setting', 'products', 'collection'].includes(template.id),
+    //   )
 
-      return [
-        ...prevFiltered,
-        {
-          id: 'home',
-          title: 'Home Page',
-          schemaType: 'home',
-          parameters: [{name: 'language', type: 'string'}],
-          value: (params) => ({
-            language: params.language,
-          }),
-        },
-        {
-          id: 'pages',
-          title: 'Pages',
-          schemaType: 'pages',
-          parameters: [{name: 'language', type: 'string'}],
-          value: (params) => ({
-            language: params.language,
-          }),
-        },
-        {
-          id: 'setting',
-          title: 'Settings',
-          schemaType: 'setting',
-          parameters: [{name: 'language', type: 'string'}],
-          value: (params) => ({
-            language: params.language,
-          }),
-        },
-        {
-          id: 'products',
-          title: 'Products',
-          schemaType: 'products',
-          parameters: [{name: 'language', type: 'string'}],
-          value: (params) => ({
-            language: params.language,
-          }),
-        },
-        {
-          id: 'collection',
-          title: 'Collection',
-          schemaType: 'collection',
-          parameters: [{name: 'language', type: 'string'}],
-          value: (params) => ({
-            language: params.language,
-          }),
-        },
-      ]
-    },
+    //   return [
+    //     ...prevFiltered,
+    //     {
+    //       id: 'home',
+    //       title: 'Home Page',
+    //       schemaType: 'home',
+    //       parameters: [{name: 'language', type: 'string'}],
+    //       value: (params) => ({
+    //         language: params.language,
+    //       }),
+    //     },
+    //     {
+    //       id: 'pages',
+    //       title: 'Pages',
+    //       schemaType: 'pages',
+    //       parameters: [{name: 'language', type: 'string'}],
+    //       value: (params) => ({
+    //         language: params.language,
+    //       }),
+    //     },
+    //     {
+    //       id: 'setting',
+    //       title: 'Settings',
+    //       schemaType: 'setting',
+    //       parameters: [{name: 'language', type: 'string'}],
+    //       value: (params) => ({
+    //         language: params.language,
+    //       }),
+    //     },
+    //     {
+    //       id: 'products',
+    //       title: 'Products',
+    //       schemaType: 'products',
+    //       parameters: [{name: 'language', type: 'string'}],
+    //       value: (params) => ({
+    //         language: params.language,
+    //       }),
+    //     },
+    //     {
+    //       id: 'collection',
+    //       title: 'Collection',
+    //       schemaType: 'collection',
+    //       parameters: [{name: 'language', type: 'string'}],
+    //       value: (params) => ({
+    //         language: params.language,
+    //       }),
+    //     },
+    //   ]
+    // },
   },
 
   form: {

@@ -5,14 +5,7 @@ export const internalLinkField = defineField({
   name: 'link',
   title: 'Internal link',
   type: 'reference',
-  to: [
-    {type: 'home'},
-    {type: 'page'},
-    {type: 'product'},
-    {type: 'locationInnerPage'},
-    {type: 'locations'},
-    {type: 'collection'},
-  ],
+  to: [{type: 'locationInnerPage'}],
 })
 
 export const internalLinkObject = {
@@ -27,7 +20,7 @@ export const internalLinkObject = {
     internalLinkField,
     defineField({
       name: 'anchor',
-      description: 'The ID of the element to scroll to, without the #.',
+      title: 'Label 2',
       type: 'string',
     }),
   ],
@@ -72,7 +65,7 @@ export const nestedNav = {
 }
 
 export default defineField({
-  name: 'headerNavigation',
+  name: 'locationLink',
   type: 'array',
   of: [
     defineArrayMember(internalLinkObject),

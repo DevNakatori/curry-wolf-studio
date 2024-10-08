@@ -45,10 +45,14 @@ import {videoSchemaType} from './objects/home/videoSchemaType'
 import {homeSecondSectionType} from './objects/home/homeSecondSectionType'
 import {homeThirdSectionType} from './objects/home/homeTherdSectionType'
 import headerNavigation from './documents/headerNavigation'
+import LocationLink from './documents/LocationLink'
 import {benefitsSection} from './objects/collection/benifitsSectionType'
 import {trustedShopType} from './objects/collection/trustedShopSectionType'
 import {footerSocialLinksTypes} from './objects/global/footerSocialLinksTypes'
 import {footerContactInfoType} from './objects/global/footerContactInfoType'
+import {locationSecondSectionType} from './objects/location/locationSecondSectionType'
+import {locationThirdSectionType} from './objects/location/locationTherdSectionType'
+import {locationMenuType} from './documents/locationMenuType'
 // Objects used as annotations must be imported first
 const annotations = [linkEmailType, linkExternalType, linkInternalType, linkProductType]
 
@@ -63,6 +67,10 @@ const objects = [
   localizedString,
   localizedText,
   headerNavigation,
+  LocationLink,
+  locationMenuType,
+  locationSecondSectionType,
+  locationThirdSectionType,
   homeThirdSectionType,
   benefitsSection,
   trustedShopType,
@@ -108,12 +116,22 @@ import {portableTextSimpleType} from './portableText/portableTextSimpleType'
 const blocks = [portableTextType, portableTextSimpleType]
 
 import {collectionType} from './documents/collection'
-import {colorThemeType} from './documents/colorTheme'
 import {pageType} from './documents/page'
 import {productType} from './documents/product'
 import {productVariantType} from './documents/productVariant'
 
-const documents = [collectionType, colorThemeType, productType, productVariantType]
+import {LocationType} from './documents/locations'
+import {CateringType} from './documents/cateringPage'
+import {locationInnerPageType} from './documents/locationInnerPage'
+
+const documents = [
+  collectionType,
+  LocationType,
+  CateringType,
+  locationInnerPageType,
+  productType,
+  productVariantType,
+]
 
 import {homeType} from './singletons/homeType'
 import {settingsType} from './singletons/settingsType'

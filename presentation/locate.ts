@@ -11,6 +11,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
     params.type === 'collection' ||
     params.type === 'home' ||
     params.type === 'page' ||
+    params.type === 'location' ||
     params.type === 'product'
   ) {
     /* 
@@ -48,6 +49,17 @@ export const locate: DocumentLocationResolver = (params, context) => {
           ? languages.map(({id, title}) => ({
               href: id === defaultLanguage.id ? sanityPreviewPath('') : sanityPreviewPath(id),
               title: `Home (${title})`,
+            }))
+          : []
+        /**
+         * Locations
+         */
+        const location = docs.find(({_type}) => _type === 'location')
+        const locationLocations = location
+          ? languages.map(({id, title}) => ({
+              href:
+                id === defaultLanguage.id ? sanityPreviewPath('location') : sanityPreviewPath(id),
+              title: `Location (${title})`,
             }))
           : []
 
@@ -145,6 +157,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
             ...pagesLocations,
             ...productsLocations,
             ...homeLocations,
+            ...locationLocations,
           ].filter(Boolean),
         } satisfies DocumentLocationsState
       }),

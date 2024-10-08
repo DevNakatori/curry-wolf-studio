@@ -3,7 +3,7 @@ import {defineField} from 'sanity'
 export const footerContactInfoType = defineField({
   name: 'footerContactInfo',
   title: 'Contact Information',
-  type: 'document',
+  type: 'object',
   fields: [
     defineField({
       name: 'title',
@@ -39,40 +39,10 @@ export const footerContactInfoType = defineField({
         }).error('Please enter a valid email address'), // Email validation
     }),
     defineField({
-      name: 'companyName',
-      title: 'Company Name',
-      type: 'string',
-    }),
-    defineField({
       name: 'address',
       title: 'Address',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'street',
-          title: 'Street',
-          type: 'string',
-        }),
-        defineField({
-          name: 'postalCode',
-          title: 'Postal Code',
-          type: 'string',
-          validation: (Rule) =>
-            Rule.regex(/^\d+$/, {
-              name: 'postal code', // Error message for invalid postal code
-            }).error('Please enter a valid postal code'), // Custom validation for postal code format
-        }),
-        defineField({
-          name: 'city',
-          title: 'City',
-          type: 'string',
-        }),
-        defineField({
-          name: 'country',
-          title: 'Country',
-          type: 'string',
-        }),
-      ],
+      type: 'text',
+      rows: 4,
     }),
   ],
   preview: {

@@ -19,11 +19,13 @@ export const shopifyCollectionType = defineField({
       fieldset: 'status',
       name: 'createdAt',
       type: 'string',
+      readOnly: true,
     }),
     defineField({
       fieldset: 'status',
       name: 'updatedAt',
       type: 'string',
+      readOnly: true,
     }),
     defineField({
       fieldset: 'status',
@@ -40,12 +42,14 @@ export const shopifyCollectionType = defineField({
       title: 'ID',
       type: 'number',
       description: 'Shopify Collection ID',
+      readOnly: true,
     }),
     defineField({
       name: 'gid',
       title: 'GID',
       type: 'string',
       description: 'Shopify Collection GID',
+      readOnly: true,
     }),
     defineField({
       name: 'slug',

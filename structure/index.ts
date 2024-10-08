@@ -6,6 +6,8 @@ import products from './productStructure'
 import settings from './settingStructure'
 import headerStructure from './headerStructure'
 import footerStructure from './footerStructure'
+import locationStructure from './locationStructure'
+import cateringStructure from './cateringStructure'
 
 const hiddenDocTypes = (listItem: ListItemBuilder) => {
   const id = listItem.getId()
@@ -16,10 +18,12 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
 
   return ![
     'collection',
-    'colorTheme',
     'home',
     'media.tag',
     'page',
+    'locations',
+    'locationInnerPage',
+    'catering',
     'product',
     'header',
     'footer',
@@ -35,7 +39,11 @@ export const structure: StructureResolver = (S, context) =>
     .title('Content')
     .items([
       home(S, context),
+      S.divider(),
       pages(S, context),
+      locationStructure(S, context),
+      S.divider(),
+      cateringStructure(S, context),
       S.divider(),
       headerStructure(S, context),
       S.divider(),
