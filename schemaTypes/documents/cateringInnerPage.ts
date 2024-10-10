@@ -1,10 +1,11 @@
 import {DocumentIcon} from '@sanity/icons'
 import {defineArrayMember, defineField} from 'sanity'
+
 import {GROUPS} from '../../constants'
 
-export const CateringType = defineField({
-  name: 'catering',
-  title: 'Catering',
+export const cateringInnerPageType = defineField({
+  name: 'cateringInnerPage',
+  title: 'Catering Inner Page',
   type: 'document',
   icon: DocumentIcon,
   groups: GROUPS,
@@ -43,28 +44,97 @@ export const CateringType = defineField({
       title: 'Description Image',
       type: 'text',
     }),
-
     defineField({
-      name: 'cateringPageImages',
-      title: 'Catering Page Images',
-      type: 'array',
-      of: [
-        defineArrayMember({
+      name: 'Brandenburger',
+      title: 'section 2nd',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'description',
+          type: 'text',
+          rows: 4,
+        }),
+        defineField({
+          name: 'content',
+          title: 'content',
+          type: 'array',
+          of: [
+            defineArrayMember({
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'title',
+                  title: '  title',
+                  type: 'text',
+                  rows: 3,
+                }),
+                defineField({
+                  name: 'description',
+                  title: 'Description',
+                  type: 'text',
+                  rows: 4,
+                }),
+              ],
+            }),
+          ],
+        }),
+        defineField({
+          name: 'ButtonText',
+          title: 'Button',
+          type: 'string',
+        }),
+        defineField({
+          name: 'ButtonLink',
+          title: 'Button Link',
+          type: 'string',
+        }),
+        defineField({
+          name: 'secondContent',
+          title: 'content',
+          type: 'array',
+          of: [
+            defineArrayMember({
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'description',
+                  title: 'Description',
+                  type: 'text',
+                  rows: 4,
+                }),
+              ],
+            }),
+          ],
+        }),
+        defineField({
+          name: 'secondButtonText',
+          title: 'Second Button',
+          type: 'string',
+        }),
+        defineField({
+          name: 'secondButtonLink',
+          title: 'Second Button Link',
+          type: 'string',
+        }),
+        defineField({
+          name: 'image',
+          title: 'image',
           type: 'object',
           fields: [
             defineField({
               name: 'image',
-              title: 'Image',
+              title: 'image',
               type: 'image',
             }),
             defineField({
               name: 'title',
-              title: 'Title',
-              type: 'string',
-            }),
-            defineField({
-              name: 'link',
-              title: 'Cta Button Link',
+              title: 'title',
               type: 'string',
             }),
           ],
@@ -149,32 +219,62 @@ export const CateringType = defineField({
       ],
     }),
     defineField({
-      name: 'Accordions',
-      title: 'Accordions Section',
+      name: 'ImagesSection',
+      title: 'Images Section',
       type: 'object',
       fields: [
         defineField({
-          name: 'title',
-          title: 'Title',
-          type: 'string',
+          name: 'cateringPageImages',
+          title: 'Catering Page Images',
+          type: 'array',
+          of: [
+            defineArrayMember({
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'image',
+                  title: 'Image',
+                  type: 'image',
+                }),
+                defineField({
+                  name: 'title',
+                  title: 'Title',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'link',
+                  title: 'image Link',
+                  type: 'string',
+                }),
+              ],
+            }),
+          ],
         }),
         defineField({
-          name: 'ctaButtontext',
-          title: 'Cta Button Text ',
-          type: 'string',
-        }),
-        defineField({
-          name: 'link',
-          title: 'Cta Button Link',
-          type: 'string',
-        }),
-        defineField({
-          name: 'accordion',
-          title: 'Accordions',
-          type: 'accordion',
+          name: 'buttons',
+          title: 'Buttons',
+          type: 'array',
+          of: [
+            defineArrayMember({
+              type: 'object',
+              fields: [
+                defineField({
+                  name: 'buttonText',
+                  title: 'Button Text',
+                  type: 'string',
+                }),
+                defineField({
+                  name: 'buttonLink',
+                  title: 'Button Text',
+                  type: 'string',
+                }),
+              ],
+            }),
+          ],
         }),
       ],
     }),
+
     defineField({
       name: 'seo',
       title: 'SEO',

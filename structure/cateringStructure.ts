@@ -11,7 +11,8 @@ export default defineStructure<ListItemBuilder>((S) =>
         .title('Catering') // You can customize the title here
         .items([
           S.documentTypeListItem('catering').title('Catering Page'),
-          // S.documentTypeListItem('locationInnerPage').title('Location Inner Pages'),
+          S.documentTypeListItem('cateringInnerPage').title('Catering Inner Pages'),
+          S.documentTypeListItem('cateringCTAForm').title('Catering CTA Form Pages'),
         ]),
     ),
 )

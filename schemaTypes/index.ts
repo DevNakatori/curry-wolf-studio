@@ -123,12 +123,22 @@ import {productVariantType} from './documents/productVariant'
 import {LocationType} from './documents/locations'
 import {CateringType} from './documents/cateringPage'
 import {locationInnerPageType} from './documents/locationInnerPage'
+import {cateringInnerPageType} from './documents/cateringInnerPage'
+import {ourStoryType} from './documents/ourStory'
+import {ourCurrywurstType} from './documents/ourCurrywurst'
+import {cateringCTAFormType} from './documents/cateringCTAForm'
+import {ContactType} from './documents/contactPage'
 
 const documents = [
   collectionType,
   LocationType,
   CateringType,
   locationInnerPageType,
+  cateringInnerPageType,
+  cateringCTAFormType,
+  ContactType,
+  ourCurrywurstType,
+  ourStoryType,
   productType,
   productVariantType,
 ]
