@@ -30,44 +30,15 @@ export const settingsType = defineType({
   ],
   fields: [
     defineField({
-      name: 'customProductOptions',
-      type: 'array',
-      group: 'productOptions',
-      of: [
-        {
-          name: 'customProductOption.color',
-          type: 'customProductOption.color',
-        },
-        {
-          name: 'customProductOption.size',
-          type: 'customProductOption.size',
-        },
-      ],
-      validation: (Rule) =>
-        Rule.custom((options: ProductOptions[] | undefined) => {
-          // Each product option type must have a unique title
-          if (options) {
-            const uniqueTitles = new Set(options.map((option) => option.title))
-            if (options.length > uniqueTitles.size) {
-              return 'Each product option type must have a unique title'
-            }
-          }
-          return true
-        }),
-    }),
-    // Not found page
-    defineField({
       name: 'notFoundPage',
       title: '404 page',
       type: 'notFoundPage',
       group: 'notFoundPage',
     }),
-    // SEO
     defineField({
-      name: 'seo',
-      title: 'SEO',
-      type: 'seo',
-      group: 'seo',
+      name: 'globalContent',
+      title: 'Global content',
+      type: 'globalContent',
     }),
     defineField({
       name: 'language',

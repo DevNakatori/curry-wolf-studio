@@ -16,10 +16,6 @@ export const ourCurrywurstType = defineField({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'slug',
-      type: 'string',
-    }),
-    defineField({
       name: 'subtitle',
       title: 'Subtitle',
       type: 'string',

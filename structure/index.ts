@@ -8,7 +8,8 @@ import headerStructure from './headerStructure'
 import footerStructure from './footerStructure'
 import locationStructure from './locationStructure'
 import cateringStructure from './cateringStructure'
-
+import policiesStructure from './policiesStructure'
+policiesStructure
 const hiddenDocTypes = (listItem: ListItemBuilder) => {
   const id = listItem.getId()
 
@@ -23,11 +24,16 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     'page',
     'locations',
     'locationInnerPage',
+    'legalNoticePage',
     'catering',
     'cateringInnerPage',
+    'policiesInnerPage',
     'contact',
+    'job',
+    'jobInnerPage',
     'cateringCTAForm',
     'ourCurrywurst',
+    'policies',
     'ourStory',
     'product',
     'header',
@@ -58,6 +64,8 @@ export const structure: StructureResolver = (S, context) =>
       products(S, context),
       S.divider(),
       settings(S, context),
+      S.divider(),
+      policiesStructure(S, context),
       S.divider(),
       ...S.documentTypeListItems().filter(hiddenDocTypes),
     ])

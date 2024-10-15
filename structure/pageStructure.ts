@@ -14,6 +14,9 @@ export default defineStructure<ListItemBuilder>((S) =>
           S.documentTypeListItem('ourStory').title('Our Story Page'),
           S.documentTypeListItem('ourCurrywurst').title('Our Currywurst Page'),
           S.documentTypeListItem('contact').title('Contact Page'),
+          S.documentTypeListItem('job').title('Job Page'),
+          S.documentTypeListItem('jobInnerPage').title('Job Inner Page'),
+          S.documentTypeListItem('legalNoticePage').title('Legal Notice Page'),
         ]),
     ),
 )

@@ -1,3 +1,4 @@
+import {defineArrayMember} from 'sanity'
 import {defineField} from 'sanity'
 
 export const benefitsSection = defineField({
@@ -6,33 +7,34 @@ export const benefitsSection = defineField({
   type: 'object',
   fields: [
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'image',
-      options: {
-        collapsed: false,
-        collapsible: true,
-      },
-      fields: [
-        defineField({
-          name: 'alt',
-          title: 'Alternative Text',
-          type: 'string',
-          description: 'Important for SEO and accessibility.',
+      name: 'benefits',
+      title: 'Benefits',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'title',
+              title: 'Title',
+              type: 'string',
+              description: 'This is the title for the Benefits Section',
+            }),
+            defineField({
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+              description: 'This is the image for the Benefits Section',
+            }),
+            defineField({
+              name: 'description',
+              title: 'Description',
+              type: 'text',
+              description: 'A brief description of the Benefits Section',
+            }),
+          ],
         }),
       ],
-    }),
-    defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      description: 'This is the title for the Benefits Section',
-    }),
-    defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'text',
-      description: 'A brief description of the Benefits Section',
     }),
   ],
   preview: {

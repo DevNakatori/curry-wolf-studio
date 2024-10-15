@@ -16,10 +16,6 @@ export const cateringCTAFormType = defineField({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'slug',
-      type: 'string',
-    }),
-    defineField({
       name: 'sectionFirst',
       title: 'Section 1st',
       type: 'object',

@@ -1,45 +1,36 @@
 import {DocumentIcon} from '@sanity/icons'
 import {defineArrayMember, defineField} from 'sanity'
 import {GROUPS} from '../../constants'
-import {validateSlug} from '../../utils/validateSlug'
 
-export const LocationType = defineField({
-  name: 'locations',
-  title: 'Location',
+export const PoliciesType = defineField({
+  name: 'policies',
+  title: 'Policies',
   type: 'document',
   icon: DocumentIcon,
   groups: GROUPS,
   fields: [
     defineField({
       name: 'title',
-      group: 'editorial',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'imagesLabels',
-      group: 'editorial',
-      type: 'locationLink',
-    }),
-    defineField({
-      name: 'locationSecondSectionType',
-      title: 'LocationPage Second Sections',
-      type: 'locationSecondSectionType',
-      group: 'editorial',
+      name: 'policiesLink',
+      type: 'object',
       options: {
         collapsed: false,
         collapsible: true,
       },
-    }),
-    defineField({
-      name: 'locationThirdSection',
-      title: 'Location Third Sections',
-      type: 'locationThirdSection',
-      group: 'editorial',
-      options: {
-        collapsed: false,
-        collapsible: true,
-      },
+      fields: [
+        defineField({
+          name: 'title',
+          type: 'string',
+        }),
+        defineField({
+          name: 'menu',
+          type: 'headerNavigation',
+        }),
+      ],
     }),
     defineField({
       name: 'seo',

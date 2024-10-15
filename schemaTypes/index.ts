@@ -53,6 +53,7 @@ import {footerContactInfoType} from './objects/global/footerContactInfoType'
 import {locationSecondSectionType} from './objects/location/locationSecondSectionType'
 import {locationThirdSectionType} from './objects/location/locationTherdSectionType'
 import {locationMenuType} from './documents/locationMenuType'
+import {globalContentType} from './objects/global/globalContentType'
 // Objects used as annotations must be imported first
 const annotations = [linkEmailType, linkExternalType, linkInternalType, linkProductType]
 
@@ -67,6 +68,7 @@ const objects = [
   localizedString,
   localizedText,
   headerNavigation,
+  globalContentType,
   LocationLink,
   locationMenuType,
   locationSecondSectionType,
@@ -128,15 +130,25 @@ import {ourStoryType} from './documents/ourStory'
 import {ourCurrywurstType} from './documents/ourCurrywurst'
 import {cateringCTAFormType} from './documents/cateringCTAForm'
 import {ContactType} from './documents/contactPage'
+import {JobType} from './documents/jobPage'
+import {JobInnerType} from './documents/jobInnerPage'
+import {PoliciesType} from './documents/policies'
+import {policiesInnerPageType} from './documents/policiesInnerPage'
+import {legalNoticePageType} from './documents/legalNoticePage'
 
 const documents = [
   collectionType,
   LocationType,
+  legalNoticePageType,
   CateringType,
+  PoliciesType,
   locationInnerPageType,
+  policiesInnerPageType,
   cateringInnerPageType,
   cateringCTAFormType,
   ContactType,
+  JobType,
+  JobInnerType,
   ourCurrywurstType,
   ourStoryType,
   productType,

@@ -67,21 +67,5 @@ export const shopifyCollectionType = defineField({
       title: 'Image URL',
       type: 'string',
     }),
-    defineField({
-      name: 'rules',
-      type: 'array',
-      description: 'Include Shopify products that satisfy these conditions',
-      of: [{type: 'collectionRule'}],
-    }),
-    defineField({
-      name: 'disjunctive',
-      title: 'Disjunctive rules?',
-      description: 'Require any condition if true, otherwise require all conditions',
-      type: 'boolean',
-    }),
-    defineField({
-      name: 'sortOrder',
-      type: 'string',
-    }),
   ],
 })

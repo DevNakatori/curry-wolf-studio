@@ -1,45 +1,43 @@
 import {DocumentIcon} from '@sanity/icons'
 import {defineArrayMember, defineField} from 'sanity'
-import {GROUPS} from '../../constants'
-import {validateSlug} from '../../utils/validateSlug'
 
-export const LocationType = defineField({
-  name: 'locations',
-  title: 'Location',
+import {GROUPS} from '../../constants'
+
+export const legalNoticePageType = defineField({
+  name: 'legalNoticePage',
+  title: 'Legal Notice  Page',
   type: 'document',
   icon: DocumentIcon,
   groups: GROUPS,
   fields: [
     defineField({
       name: 'title',
-      group: 'editorial',
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'imagesLabels',
-      group: 'editorial',
-      type: 'locationLink',
+      name: 'button',
+      type: 'object',
+      options: {
+        collapsible: true,
+        collapsed: false,
+      },
+      fields: [
+        defineField({
+          name: 'label',
+          title: 'Button Label',
+          type: 'string',
+        }),
+        defineField({
+          name: 'link',
+          type: 'string',
+        }),
+      ],
     }),
     defineField({
-      name: 'locationSecondSectionType',
-      title: 'LocationPage Second Sections',
-      type: 'locationSecondSectionType',
-      group: 'editorial',
-      options: {
-        collapsed: false,
-        collapsible: true,
-      },
-    }),
-    defineField({
-      name: 'locationThirdSection',
-      title: 'Location Third Sections',
-      type: 'locationThirdSection',
-      group: 'editorial',
-      options: {
-        collapsed: false,
-        collapsible: true,
-      },
+      name: 'content',
+      title: 'Content',
+      type: 'portableTextSimple',
     }),
     defineField({
       name: 'seo',

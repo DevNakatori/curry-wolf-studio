@@ -6,12 +6,6 @@ export const trustedShopType = defineField({
   type: 'object',
   fields: [
     defineField({
-      name: 'title',
-      title: 'Title',
-      type: 'string',
-      description: 'The main title, e.g. "Alle Produkte"',
-    }),
-    defineField({
       name: 'certifications',
       title: 'Certifications',
       type: 'array',
@@ -23,18 +17,6 @@ export const trustedShopType = defineField({
               name: 'image',
               title: 'Certification Image',
               type: 'image',
-              options: {
-                collapsed: false,
-                collapsible: true,
-              },
-              fields: [
-                defineField({
-                  name: 'alt',
-                  title: 'Alternative Text',
-                  type: 'string',
-                  description: 'Important for SEO and accessibility.',
-                }),
-              ],
             }),
             defineField({
               name: 'label',
@@ -49,8 +31,7 @@ export const trustedShopType = defineField({
     defineField({
       name: 'deliveryNote',
       title: 'Delivery Note',
-      type: 'text',
-      description: 'The small print about delivery times and other info.',
+      type: 'portableTextSimple',
     }),
   ],
   preview: {
