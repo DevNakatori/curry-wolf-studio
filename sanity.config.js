@@ -35,7 +35,7 @@ const SANITY_STUDIO_PRODUCTION_URL = isDev
 
 export default defineConfig({
   name: 'default',
-  title: 'Shopify - wolfshoppen',
+  title: 'curry-wolf',
   projectId: projectId || 'vu17rm6q',
   dataset: dataset || 'production',
 

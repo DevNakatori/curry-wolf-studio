@@ -42,6 +42,11 @@ export const JobInnerType = defineField({
           title: 'Button Text',
           type: 'string',
         }),
+        defineField({
+          name: 'buttonText',
+          title: 'Button Link',
+          type: 'string',
+        }),
       ],
     }),
 
