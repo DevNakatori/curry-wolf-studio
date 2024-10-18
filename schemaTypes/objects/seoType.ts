@@ -23,9 +23,5 @@ export const seoType = defineField({
       validation: (Rule) =>
         Rule.max(150).warning('Longer descriptions may be truncated by search engines'),
     }),
-    defineField({
-      name: 'image',
-      type: 'image',
-    }),
   ],
 })
