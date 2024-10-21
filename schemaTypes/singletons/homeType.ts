@@ -13,7 +13,7 @@ export const homeType = defineField({
   fields: [
     defineField({
       name: 'video',
-      title: 'Banner Video',
+      title: 'Banner',
       type: 'video',
       group: 'editorial',
       options: {

@@ -6,16 +6,10 @@ export const videoSchemaType = defineField({
   type: 'object',
   fields: [
     defineField({
-      name: 'video',
-      title: 'Upload Video',
-      type: 'mux.video',
-      description: 'Upload a video file',
-    }),
-    defineField({
       name: 'title',
       title: 'Title',
       type: 'text',
-      description: 'A short Title for the video',
+      description: 'A short Title for the banner',
       rows: 4,
     }),
     defineField({
@@ -23,7 +17,7 @@ export const videoSchemaType = defineField({
       title: 'Caption',
       type: 'text',
       rows: 4,
-      description: 'A short caption for the video',
+      description: 'A short caption for the banner',
     }),
   ],
 })
