@@ -10,7 +10,6 @@ export const internalLinkField = defineField({
     {type: 'page'},
     {type: 'product'},
     {type: 'locationInnerPage'},
-    {type: 'legalNoticePage'},
     {type: 'policiesInnerPage'},
     {type: 'catering'},
     {type: 'policies'},

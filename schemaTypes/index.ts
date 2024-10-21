@@ -134,12 +134,9 @@ import {JobType} from './documents/jobPage'
 import {JobInnerType} from './documents/jobInnerPage'
 import {PoliciesType} from './documents/policies'
 import {policiesInnerPageType} from './documents/policiesInnerPage'
-import {legalNoticePageType} from './documents/legalNoticePage'
-
 const documents = [
   collectionType,
   LocationType,
-  legalNoticePageType,
   CateringType,
   PoliciesType,
   locationInnerPageType,

@@ -24,7 +24,6 @@ const hiddenDocTypes = (listItem: ListItemBuilder) => {
     'page',
     'locations',
     'locationInnerPage',
-    'legalNoticePage',
     'catering',
     'cateringInnerPage',
     'policiesInnerPage',

@@ -22,7 +22,6 @@ export const PAGE_REFERENCES = [
   {type: 'home'},
   {type: 'page'},
   {type: 'product'},
-  {type: 'legalNoticePage'},
   {type: 'policiesInnerPage'},
   {type: 'catering'},
   {type: 'policies'},
