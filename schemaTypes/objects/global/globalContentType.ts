@@ -25,6 +25,26 @@ export const globalContentType = defineField({
       type: 'string',
     }),
     defineField({
+      name: 'moreInformation',
+      title: 'More information Text',
+      type: 'string',
+    }),
+    defineField({
+      name: 'ingredientsText',
+      title: 'Ingredients Text',
+      type: 'string',
+    }),
+    defineField({
+      name: 'nutritionalValues',
+      title: 'Nutritional values Text',
+      type: 'string',
+    }),
+    defineField({
+      name: 'reparation',
+      title: 'preparation Text',
+      type: 'string',
+    }),
+    defineField({
       name: 'soldOutButton',
       title: 'Sold Out Button Text',
       type: 'string',
