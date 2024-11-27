@@ -55,7 +55,6 @@ export default defineConfig({
     documentInternationalization({
       supportedLanguages: languages,
       schemaTypes: [
-        'page',
         'home',
         'locations',
         'catering',
@@ -87,7 +86,6 @@ export default defineConfig({
       supportedLanguages: getAllLanguages(),
       defaultLanguages: [languages[0].id],
       documentTypes: [
-        'page',
         'home',
         'locations',
         'catering',
@@ -139,60 +137,6 @@ export default defineConfig({
 
   schema: {
     types: schemaTypes,
-    // templates: (prev) => {
-    //   const prevFiltered = prev.filter(
-    //     (template) => !['home', 'pages', 'setting', 'products', 'collection'].includes(template.id),
-    //   )
-
-    //   return [
-    //     ...prevFiltered,
-    //     {
-    //       id: 'home',
-    //       title: 'Home Page',
-    //       schemaType: 'home',
-    //       parameters: [{name: 'language', type: 'string'}],
-    //       value: (params) => ({
-    //         language: params.language,
-    //       }),
-    //     },
-    //     {
-    //       id: 'pages',
-    //       title: 'Pages',
-    //       schemaType: 'pages',
-    //       parameters: [{name: 'language', type: 'string'}],
-    //       value: (params) => ({
-    //         language: params.language,
-    //       }),
-    //     },
-    //     {
-    //       id: 'setting',
-    //       title: 'Settings',
-    //       schemaType: 'setting',
-    //       parameters: [{name: 'language', type: 'string'}],
-    //       value: (params) => ({
-    //         language: params.language,
-    //       }),
-    //     },
-    //     {
-    //       id: 'products',
-    //       title: 'Products',
-    //       schemaType: 'products',
-    //       parameters: [{name: 'language', type: 'string'}],
-    //       value: (params) => ({
-    //         language: params.language,
-    //       }),
-    //     },
-    //     {
-    //       id: 'collection',
-    //       title: 'Collection',
-    //       schemaType: 'collection',
-    //       parameters: [{name: 'language', type: 'string'}],
-    //       value: (params) => ({
-    //         language: params.language,
-    //       }),
-    //     },
-    //   ]
-    // },
   },
 
   form: {

@@ -118,7 +118,6 @@ import {portableTextSimpleType} from './portableText/portableTextSimpleType'
 const blocks = [portableTextType, portableTextSimpleType]
 
 import {collectionType} from './documents/collection'
-import {pageType} from './documents/page'
 import {productType} from './documents/product'
 import {productVariantType} from './documents/productVariant'
 
@@ -157,6 +156,6 @@ import {settingsType} from './singletons/settingsType'
 import header from './singletons/header'
 import footer from './singletons/footer'
 
-const singletons = [homeType, settingsType, header, footer, pageType]
+const singletons = [homeType, settingsType, header, footer]
 
 export const schemaTypes = [...annotations, ...objects, ...singletons, ...blocks, ...documents]

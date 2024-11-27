@@ -10,7 +10,6 @@ export default defineStructure<ListItemBuilder>((S) =>
       S.list()
         .title('Pages') // You can customize the title here
         .items([
-          S.documentTypeListItem('page').title('Pages'), // List of Pages
           S.documentTypeListItem('ourStory').title('Our Story Page'),
           S.documentTypeListItem('ourCurrywurst').title('Our Currywurst Page'),
           S.documentTypeListItem('contact').title('Contact Page'),

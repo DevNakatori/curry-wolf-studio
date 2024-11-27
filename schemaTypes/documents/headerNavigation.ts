@@ -7,7 +7,6 @@ export const internalLinkField = defineField({
   type: 'reference',
   to: [
     {type: 'home'},
-    {type: 'page'},
     {type: 'product'},
     {type: 'locationInnerPage'},
     {type: 'policiesInnerPage'},
