@@ -20,6 +20,7 @@ import {googleTranslate} from 'sanity-plugin-google-translate'
 import {muxInput} from 'sanity-plugin-mux-input'
 const {projectId, dataset, apiVersion, previewUrl} = projectDetails
 const localePreviewUrl = 'http://localhost:3000'
+import {assist} from '@sanity/assist'
 const devOnlyPlugins = [
   visionTool({
     defaultApiVersion: apiVersion,
@@ -131,6 +132,13 @@ export default defineConfig({
     muxInput({
       apiSecret: process.env.SANITY_STUDIO_MUX_TOKEN_SECRET,
       apiKey: process.env.SANITY_STUDIO_MUX_TOKEN_ID,
+    }),
+    assist({
+      translate: {
+        document: {
+          languageField: 'language',
+        },
+      },
     }),
     ...(isDev ? devOnlyPlugins : []),
   ],

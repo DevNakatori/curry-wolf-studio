@@ -6,7 +6,7 @@ export const countries: Localizations = {
     isoCode: 'de-de',
     label: 'Germany (EUR €)',
     language: 'DE',
-    languageLabel: 'Deutsch',
+    languageLabel: 'German',
     salesChannel: 'hydrogen',
   },
   '/en': {
@@ -16,6 +16,24 @@ export const countries: Localizations = {
     label: 'United States (USD $)',
     language: 'EN',
     languageLabel: 'English',
+    salesChannel: 'hydrogen',
+  },
+  '/nl': {
+    country: 'NL',
+    currency: 'EUR',
+    isoCode: 'nl-nl',
+    label: 'Dutch (EUR €)',
+    language: 'NL',
+    languageLabel: 'Dutch',
+    salesChannel: 'hydrogen',
+  },
+  '/cn': {
+    country: 'CN',
+    currency: 'USD',
+    isoCode: 'zh-us',
+    label: 'chinese (USD $)',
+    language: 'CN',
+    languageLabel: 'Chinese',
     salesChannel: 'hydrogen',
   },
 }
