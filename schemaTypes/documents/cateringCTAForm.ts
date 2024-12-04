@@ -38,6 +38,9 @@ export const cateringCTAFormType = defineField({
           name: 'buttonLink',
           title: 'Link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         },
         }),
         defineField({
           name: 'image',
@@ -69,11 +72,13 @@ export const cateringCTAFormType = defineField({
               name: 'Sectionname',
               title: 'Section Name',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'name',
               title: 'Name',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'EMail',
@@ -170,6 +175,7 @@ export const cateringCTAFormType = defineField({
                   name: 'title',
                   title: 'Title',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'dishes',
@@ -184,6 +190,7 @@ export const cateringCTAFormType = defineField({
                           title: 'dishes',
                           description: 'Name of the dish',
                           type: 'string',
+                          options: {aiAssist: {translateAction: true}},
                         }),
                       ],
                     }),
@@ -204,6 +211,7 @@ export const cateringCTAFormType = defineField({
                   name: 'title',
                   title: 'Title',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'drinks',
@@ -218,6 +226,7 @@ export const cateringCTAFormType = defineField({
                           title: 'drink',
                           description: 'Name of the drink',
                           type: 'string',
+                          options: {aiAssist: {translateAction: true}},
                         }),
                       ],
                     }),
@@ -252,6 +261,7 @@ export const cateringCTAFormType = defineField({
                           title: 'Area',
                           description: 'Name of the area ',
                           type: 'string',
+                          options: {aiAssist: {translateAction: true}},
                         }),
                       ],
                     }),
@@ -286,6 +296,7 @@ export const cateringCTAFormType = defineField({
                           title: 'Equipment',
                           description: 'Do you need equipment Text',
                           type: 'string',
+                          options: {aiAssist: {translateAction: true}},
                         }),
                       ],
                     }),

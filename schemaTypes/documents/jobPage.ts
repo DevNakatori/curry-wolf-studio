@@ -53,6 +53,7 @@ export const JobType = defineField({
               name: 'title',
               title: 'Title',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
           ],
         }),
@@ -104,6 +105,7 @@ export const JobType = defineField({
                       name: 'title',
                       title: 'Title',
                       type: 'string',
+                      options: {aiAssist: {translateAction: true}},
                     }),
                     defineField({
                       name: 'link',

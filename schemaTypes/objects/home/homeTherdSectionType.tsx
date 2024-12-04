@@ -42,6 +42,9 @@ export const homeThirdSectionType = defineField({
       name: 'buttonLink',
       title: 'Button Link',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     },
       description: 'URL for the button action',
     }),
   ],

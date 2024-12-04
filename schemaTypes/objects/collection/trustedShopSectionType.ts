@@ -23,6 +23,7 @@ export const trustedShopType = defineField({
               title: 'Certification Label',
               type: 'string',
               description: 'The text next to the certification, e.g. "Zertifizierter online-shop".',
+              options: {aiAssist: {translateAction: true}},
             }),
           ],
         },

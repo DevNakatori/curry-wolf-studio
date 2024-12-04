@@ -18,6 +18,9 @@ export const cateringInnerPageType = defineField({
     defineField({
       name: 'slug',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     },
     }),
     defineField({
       name: 'heroTitle',
@@ -33,6 +36,9 @@ export const cateringInnerPageType = defineField({
       name: 'link',
       title: 'Cta Button Link',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     },
     }),
     defineField({
       name: 'image',
@@ -73,12 +79,14 @@ export const cateringInnerPageType = defineField({
                   title: '  title',
                   type: 'text',
                   rows: 3,
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'description',
                   title: 'Description',
                   type: 'text',
                   rows: 4,
+                  options: {aiAssist: {translateAction: true}},
                 }),
               ],
             }),
@@ -93,6 +101,9 @@ export const cateringInnerPageType = defineField({
           name: 'ButtonLink',
           title: 'Button Link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         },
         }),
         defineField({
           name: 'secondContent',
@@ -107,6 +118,7 @@ export const cateringInnerPageType = defineField({
                   title: 'Description',
                   type: 'text',
                   rows: 4,
+                  options: {aiAssist: {translateAction: true}},
                 }),
               ],
             }),
@@ -121,6 +133,9 @@ export const cateringInnerPageType = defineField({
           name: 'secondButtonLink',
           title: 'Second Button Link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         },
         }),
         defineField({
           name: 'image',
@@ -136,6 +151,7 @@ export const cateringInnerPageType = defineField({
               name: 'title',
               title: 'title',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
           ],
         }),
@@ -154,6 +170,7 @@ export const cateringInnerPageType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'ReferenzenContent',
@@ -168,11 +185,13 @@ export const cateringInnerPageType = defineField({
                   title: 'description',
                   type: 'text',
                   rows: 3,
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'title',
                   title: 'title',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
               ],
             }),
@@ -240,6 +259,7 @@ export const cateringInnerPageType = defineField({
                   name: 'title',
                   title: 'Title',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'link',
@@ -262,6 +282,7 @@ export const cateringInnerPageType = defineField({
                   name: 'buttonText',
                   title: 'Button Text',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'buttonLink',

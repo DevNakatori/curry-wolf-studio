@@ -28,14 +28,14 @@ export const countries: Localizations = {
     salesChannel: 'hydrogen',
   },
   '/cn': {
-    country: 'CN',
-    currency: 'USD',
-    isoCode: 'zh-us',
-    label: 'chinese (USD $)',
-    language: 'CN',
-    languageLabel: 'Chinese',
-    salesChannel: 'hydrogen',
-  },
+  country: 'CN',
+  currency: 'USD',
+  isoCode: 'zh-CN', 
+  label: 'Chinese (USD $)',
+  language: 'ZH',
+  languageLabel: 'Chinese',
+  salesChannel: 'hydrogen',
+},
 }
 
 interface Language {

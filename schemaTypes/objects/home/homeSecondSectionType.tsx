@@ -27,18 +27,21 @@ export const homeSecondSectionType = defineField({
               title: 'Title',
               type: 'string',
               description: 'Title for the card',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'description',
               title: 'Description',
               type: 'text',
               description: 'Short description for the card',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'buttonText',
               title: 'Button Text',
               type: 'string',
               description: 'Text for the button',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'buttonLink',

@@ -8,6 +8,7 @@ export const locationThirdSectionType = defineField({
     defineField({
       name: 'title',
       title: 'Title',
+      options: {aiAssist: {translateAction: true}},
       type: 'string',
       description: 'Title for the Section',
     }),
@@ -37,6 +38,7 @@ export const locationThirdSectionType = defineField({
       title: 'Button Text',
       type: 'string',
       description: 'Text for the button',
+      options: {aiAssist: {translateAction: true}},
     }),
     defineField({
       name: 'buttonLink',

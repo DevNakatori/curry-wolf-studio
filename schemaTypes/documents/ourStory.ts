@@ -38,6 +38,7 @@ export const ourStoryType = defineField({
                   title: 'Title',
                   type: 'string',
                   description: 'Title for the card',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'image',
@@ -50,6 +51,7 @@ export const ourStoryType = defineField({
                   title: 'Description',
                   type: 'text',
                   description: 'Short description for the card',
+                  options: {aiAssist: {translateAction: true}},
                 }),
               ],
             }),

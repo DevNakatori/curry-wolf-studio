@@ -22,6 +22,9 @@ export const locationInnerPageType = defineField({
     defineField({
       name: 'slug',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     }
     }),
     defineField({
       name: 'video',
@@ -92,6 +95,7 @@ export const locationInnerPageType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'OpeningTimes',
@@ -105,6 +109,7 @@ export const locationInnerPageType = defineField({
                   name: 'day',
                   title: 'Day',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'time',
@@ -130,6 +135,7 @@ export const locationInnerPageType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'PaymentMethodsImages',
@@ -168,6 +174,7 @@ export const locationInnerPageType = defineField({
         defineField({
           name: 'buttonText',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'buttonLink',

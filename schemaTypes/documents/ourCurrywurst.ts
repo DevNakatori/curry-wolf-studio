@@ -110,18 +110,21 @@ export const ourCurrywurstType = defineField({
                   title: 'Title',
                   type: 'string',
                   description: 'Title for the card',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'description',
                   title: 'Description',
                   type: 'text',
                   description: 'Short description for the card',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'buttonText',
                   title: 'Button Text',
                   type: 'string',
                   description: 'Text for the button',
+                  options: {aiAssist: {translateAction: true}},
                 }),
                 defineField({
                   name: 'buttonLink',
@@ -149,12 +152,14 @@ export const ourCurrywurstType = defineField({
           title: 'Title',
           type: 'string',
           description: 'Title for the Section',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'Subtitle',
           title: 'Sub Title',
           type: 'string',
           description: 'Sub Title for the Section',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'images',
@@ -179,6 +184,7 @@ export const ourCurrywurstType = defineField({
           title: 'Button Text',
           type: 'string',
           description: 'Text for the button',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'buttonLink',

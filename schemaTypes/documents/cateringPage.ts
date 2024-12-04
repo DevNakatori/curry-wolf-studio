@@ -17,6 +17,9 @@ export const CateringType = defineField({
     defineField({
       name: 'slug',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     },
     }),
     defineField({
       name: 'heroTitle',
@@ -32,11 +35,16 @@ export const CateringType = defineField({
       name: 'link',
       title: 'Cta Button Link',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     },
+      
     }),
     defineField({
       name: 'image',
       title: 'Made In Berlin Logo',
       type: 'image',
+
     }),
     defineField({
       name: 'Description',
@@ -61,6 +69,7 @@ export const CateringType = defineField({
               name: 'title',
               title: 'Title',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'link',
@@ -84,6 +93,7 @@ export const CateringType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'ReferenzenContent',
@@ -97,12 +107,14 @@ export const CateringType = defineField({
                   name: 'description',
                   title: 'description',
                   type: 'text',
+                  options: {aiAssist: {translateAction: true}},
                   rows: 3,
                 }),
                 defineField({
                   name: 'title',
                   title: 'title',
                   type: 'string',
+                  options: {aiAssist: {translateAction: true}},
                 }),
               ],
             }),
@@ -128,6 +140,7 @@ export const CateringType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'image',
@@ -157,21 +170,27 @@ export const CateringType = defineField({
           name: 'title',
           title: 'Title',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'ctaButtontext',
           title: 'Cta Button Text ',
           type: 'string',
+          options: {aiAssist: {translateAction: true}},
         }),
         defineField({
           name: 'link',
           title: 'Cta Button Link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         },
         }),
         defineField({
           name: 'accordion',
           title: 'Accordions',
           type: 'accordion',
+          options: {aiAssist: {translateAction: true}},
         }),
       ],
     }),

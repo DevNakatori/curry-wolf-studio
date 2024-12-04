@@ -19,6 +19,7 @@ export const benefitsSection = defineField({
               title: 'Title',
               type: 'string',
               description: 'This is the title for the Benefits Section',
+              options: {aiAssist: {translateAction: true}},
             }),
             defineField({
               name: 'image',
@@ -31,6 +32,7 @@ export const benefitsSection = defineField({
               title: 'Description',
               type: 'text',
               description: 'A brief description of the Benefits Section',
+              options: {aiAssist: {translateAction: true}},
             }),
           ],
         }),

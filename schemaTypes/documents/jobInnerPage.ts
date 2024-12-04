@@ -45,7 +45,10 @@ export const JobInnerType = defineField({
         defineField({
           name: 'buttonLink',
           title: 'Button Link',
-          type: 'string',
+          type: 'string',   
+             options: {
+            aiAssist: {exclude: true}
+         },
         }),
       ],
     }),
@@ -67,6 +70,7 @@ export const JobInnerType = defineField({
               name: 'title',
               title: 'Title',
               type: 'string',
+              options: {aiAssist: {translateAction: true}},
             }),
           ],
         }),
