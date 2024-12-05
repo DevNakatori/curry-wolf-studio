@@ -48,6 +48,9 @@ export const ourCurrywurstType = defineField({
           name: 'buttonLink',
           title: 'Button Link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         }
         }),
       ],
     }),

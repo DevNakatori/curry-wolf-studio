@@ -18,6 +18,9 @@ export const policiesInnerPageType = defineField({
     defineField({
       name: 'slug',
       type: 'string',
+      options: {
+        aiAssist: {exclude: true}
+     }
     }),
     defineField({
       name: 'button',
@@ -35,6 +38,9 @@ export const policiesInnerPageType = defineField({
         defineField({
           name: 'link',
           type: 'string',
+          options: {
+            aiAssist: {exclude: true}
+         }
         }),
       ],
     }),
