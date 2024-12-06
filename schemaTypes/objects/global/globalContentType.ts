@@ -85,6 +85,11 @@ export const globalContentType = defineField({
           type: 'string',
         }),
         defineField({
+          name: 'anzahl',
+          title: 'Cart Anzahl',
+          type: 'string',
+        }),
+        defineField({
           name: 'ContinueShopping',
           title: 'Continue shopping Button Text',
           type: 'string',
