@@ -26,6 +26,18 @@ export const CateringType = defineField({
       title: 'Hero Title',
       type: 'string',
     }),
+
+    defineField({
+      name: 'image',
+      title: 'Made In Berlin Logo',
+      type: 'image',
+
+    }),
+    defineField({
+      name: 'Description',
+      title: 'Description Image',
+      type: 'text',
+    }),
     defineField({
       name: 'ctaButtontext',
       title: 'Cta Button Text ',
@@ -41,17 +53,32 @@ export const CateringType = defineField({
       
     }),
     defineField({
-      name: 'image',
-      title: 'Made In Berlin Logo',
-      type: 'image',
-
+      name: 'cateringPageBannerImages',
+      title: 'Catering Page Banner  Images',
+      type: 'array',
+      of: [
+        defineArrayMember({
+          type: 'object',
+          fields: [
+            defineField({
+              name: 'image',
+              title: 'Image',
+              type: 'image',
+            }),
+          ],
+        }),
+      ],
     }),
     defineField({
-      name: 'Description',
-      title: 'Description Image',
-      type: 'text',
+      name: 'naturlichVeganLogo',
+      title: 'Naturlich Vegan Logo',
+      type: 'image',
     }),
-
+    defineField({
+      name: 'subTitle',
+      title: 'Sub Title',
+      type: 'string',
+    }),
     defineField({
       name: 'cateringPageImages',
       title: 'Catering Page Images',

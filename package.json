@@ -35,6 +35,7 @@
     "pluralize-esm": "^9.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
     "sanity": "^3.63.0",
     "sanity-plugin-google-translate": "^3.0.0",
     "sanity-plugin-hotspot-array": "^1.0.1",

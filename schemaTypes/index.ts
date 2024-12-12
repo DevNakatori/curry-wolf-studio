@@ -53,6 +53,7 @@ import {footerContactInfoType} from './objects/global/footerContactInfoType'
 import {locationSecondSectionType} from './objects/location/locationSecondSectionType'
 import {locationThirdSectionType} from './objects/location/locationTherdSectionType'
 import {locationMenuType} from './documents/locationMenuType'
+import announcement from './objects/announcement'
 import {globalContentType} from './objects/global/globalContentType'
 // Objects used as annotations must be imported first
 const annotations = [linkEmailType, linkExternalType, linkInternalType, linkProductType]
@@ -89,6 +90,7 @@ const objects = [
   footerSocialLinksTypes,
   gridItemType,
   gridType,
+  announcement,
   heroType,
   imageCallToActionType,
   imageFeaturesType,
@@ -155,6 +157,7 @@ import {homeType} from './singletons/homeType'
 import {settingsType} from './singletons/settingsType'
 import header from './singletons/header'
 import footer from './singletons/footer'
+
 
 const singletons = [homeType, settingsType, header, footer]
 

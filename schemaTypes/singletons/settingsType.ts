@@ -1,4 +1,6 @@
-import {CogIcon, ControlsIcon, ErrorOutlineIcon, MenuIcon, SearchIcon} from '@sanity/icons'
+import {CogIcon, ControlsIcon, ErrorOutlineIcon, SearchIcon} from '@sanity/icons'
+import { TfiAnnouncement } from "react-icons/tfi";
+
 import {defineType, defineField} from 'sanity'
 
 const TITLE = 'Settings'
@@ -23,6 +25,11 @@ export const settingsType = defineType({
       icon: ErrorOutlineIcon,
     },
     {
+      name: 'Announcement',
+      title: 'Shop Announcement ',
+      icon: TfiAnnouncement,
+    },
+    {
       name: 'seo',
       title: 'SEO',
       icon: SearchIcon,
@@ -40,6 +47,31 @@ export const settingsType = defineType({
       title: 'Global content',
       type: 'globalContent',
     }),
+    defineField({
+      name: 'Announcement',
+      title: 'Announcement ',
+      type: 'announcement',
+      group: 'Announcement',
+    }),
+    defineField({
+			name: 'ShopHolidays',
+			title: 'Shop Holidays',
+			type: 'object',
+      group: 'Announcement',
+      fields: [
+        defineField({
+          name: 'shopClose',
+          title: 'Shop Close',
+          type: 'datetime',
+        }),
+        defineField({
+          name: 'shopOpen',
+          title: 'Shop Open',
+          type: 'datetime',
+        }),
+      ]
+		}),
+    
     defineField({
       name: 'language',
       type: 'string',

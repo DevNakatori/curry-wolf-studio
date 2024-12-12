@@ -12,21 +12,16 @@ export const notFoundPageType = defineField({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'body',
-      type: 'text',
-      rows: 2,
+      name: 'btnText',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
-      name: 'collection',
-      type: 'reference',
-      description: 'Collection products displayed on this page',
-      weak: true,
-      to: [
-        {
-          name: 'collection',
-          type: 'collection',
-        },
-      ],
+      name: 'btnLink',
+      type: 'url',
+      validation: Rule => Rule.uri({
+        allowRelative: true,
+      })
     }),
   ],
 })
