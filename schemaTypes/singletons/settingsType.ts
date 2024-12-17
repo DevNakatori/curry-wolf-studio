@@ -60,13 +60,13 @@ export const settingsType = defineType({
       group: 'Announcement',
       fields: [
         defineField({
-          name: 'start',
-          title: 'Shop Open ',
+          name: 'end',
+          title: 'Shop Close ',
           type: 'datetime',
         }),
         defineField({
-          name: 'end',
-          title: 'Shop Close ',
+          name: 'start',
+          title: 'Shop Open ',
           type: 'datetime',
         }),
         defineField({
