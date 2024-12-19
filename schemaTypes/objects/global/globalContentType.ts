@@ -7,6 +7,10 @@ export const globalContentType = defineField({
   type: 'object',
   fields: [
     defineField({
+      name: 'badgeCertified',
+      type: 'image',
+    }),
+    defineField({
       name: 'trustedShop',
       type: 'trustedShop',
     }),
